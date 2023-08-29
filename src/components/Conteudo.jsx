@@ -1,4 +1,4 @@
-export default function Conteudo() {
+export default function Conteudo(props) {
     //Área declarativa
   
     return (
@@ -10,6 +10,7 @@ export default function Conteudo() {
             <a href="/">Home Page</a>
           </p>
           <button onClick={() => alert("Hello World!")}>Click Me!</button>
+          <img src={props.reactLogoProps} alt={props.reactLogoAltProps} />
         </section>
       </>
     );
