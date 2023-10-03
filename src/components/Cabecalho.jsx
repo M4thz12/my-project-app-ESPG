@@ -7,7 +7,7 @@ export default function Cabecalho() {
   return (
     <>
         <header className={styles.cabecalho}>
-          <h1>Vite + React</h1>
+          
           <img src="/img/produtos.png" alt="Mãos segurando caixas." /> 
 
           {/* Crie uma lista com 5 links para as nossas rotas:

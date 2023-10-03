@@ -8,9 +8,17 @@ export default function Produtos() {
     document.title = "Lista de Produtos";
 
     const [listaProdutosLocal, setListaProdutosLocal] = useState([{}]);
+
+
+    
     
     //Estrutura que recebe a lista de produtos externa e repassa para uma lista local.
     useEffect(()=>{
+      fetch("http://localhost:5000/produtos")
+      .then((response)=> response.json())
+      .then((response)=> setListaProdutosLocal(response))
+      .catch(error=> console.log(error));
+      
       setListaProdutosLocal(ListaProdutosExterna);
     },[]);
 
