@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { ListaProdutosExterna } from "../components/ListaProdutosExterna";
 import { Link } from "react-router-dom";
 import styles from "./Produtos.module.css";
 
@@ -18,8 +17,8 @@ export default function Produtos() {
       .then((response)=> response.json())
       .then((response)=> setListaProdutosLocal(response))
       .catch(error=> console.log(error));
+
       
-      setListaProdutosLocal(ListaProdutosExterna);
     },[]);
 
   return (
